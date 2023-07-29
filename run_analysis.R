@@ -68,4 +68,4 @@ merged_data <- reshape2::melt(data = merged_data, id = c("Subject", "Activity"))
 merged_data <- reshape2::dcast(data = merged_data, Subject + Activity ~ variable, fun.aggregate = mean)
 
 write.csv(merged_data, file = "tidy_data_02.csv", row.names = FALSE)
-write.table(merged_data, file = "tidy_data_02.txt", row.names = FALSE)
+write.table(merged_data, file = "tidy_data_02.txt", row.name = FALSE)
